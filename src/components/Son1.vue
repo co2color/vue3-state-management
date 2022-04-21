@@ -2,6 +2,8 @@
 import { ref } from 'vue'
 import { useUserStore } from '../store'
 const store = useUserStore()
+// you can't use like `store.state.name = x` here, because it's a readonly ref.
+// you can only change it by using `store.commit`
 const showRedSpan = ref(false)
 const loginClick = () => {
   store.actions.useLogin('handsome co2color', '123456')

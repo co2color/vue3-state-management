@@ -16,6 +16,7 @@ export const actions = {
   },
 }
 export const useUserStore = () => ({
+  // state is a readonly object, so you can't directly change the state value.
   state,
   actions,
 })
